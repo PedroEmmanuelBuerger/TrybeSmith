@@ -3,7 +3,7 @@ version: "3.1"
 services:
   # Serviço que irá rodar o node
   app-trybesmith:
-    # Imagem base do container
+    # Imagem base do containe
     build: .
     # Usuário linux padrão do container, não é recomendado usar root
     # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#non-root-user
