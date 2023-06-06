@@ -22,3 +22,8 @@ export type OrderReturn = {
   userId: number;
   productIds: number[];
 };
+
+export type OrderRequest = {
+  productIds: number[],
+  userId: number
+};

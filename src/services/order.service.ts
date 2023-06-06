@@ -2,9 +2,11 @@
 import OrderModel, {
 } from '../database/models/order.model';
 
+import ProductModel from '../database/models/product.model';
+
 import { ServiceResponse } from '../types/ServiceResponse';
 
-import { OrderEx, OrderReturn } from '../types/Order';
+import { OrderEx, OrderReturn, OrderRequest } from '../types/Order';
 
 async function list(): Promise<ServiceResponse<OrderReturn[]>> {
   const orders = await OrderModel.findAll({
@@ -22,6 +24,18 @@ async function list(): Promise<ServiceResponse<OrderReturn[]>> {
   return { type: 'SUCCESSFUL', message: transformedOrders };
 }
 
+async function create(order: OrderRequest): Promise<ServiceResponse<OrderRequest>> {
+  const { userId, productIds } = order;
+  productIds.forEach(async (product: number) => {
+    const createOrder = await OrderModel.create({ userId });
+    const { id } = createOrder.dataValues;
+    await ProductModel.update({ orderId: id }, { where: { id: product } });
+  });
+
+  return { type: 'SUCCESSFUL', message: order };
+}
+
 export default {
   list,
+  create,
 };
