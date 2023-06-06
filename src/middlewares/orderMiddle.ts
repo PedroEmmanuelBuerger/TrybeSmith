@@ -10,6 +10,7 @@ async function userMiddle(req: Request, _res: Response, next: NextFunction) {
     return next({ status: 422, message: '"userId" must be a number' });
   }
   const user = await UserModel.findOne({ where: { id: userId } });
+  console.log(user);
   if (!user) return next({ status: 404, message: '"userId" not found' });
   next();
 }
