@@ -4,7 +4,7 @@ O trybesmith foi um projeto realizado no curso da trybe, a qual simula uma aplic
 ## Funcionalidades
 O projeto possui as seguintes funcionalidades:
 - cadastro e login de usuarios(usando de validações de token)
-- casdastro, exclusão e alteração de pedidos.
+- cadastro, exclusão e alteração de pedidos.
 - visualização e cadastro de novos produtos.
 
 ## Tecnologias Utilizadas
