@@ -29,7 +29,8 @@ async function create(order: OrderRequest): Promise<ServiceResponse<OrderRequest
   productIds.forEach(async (product: number) => {
     const createOrder = await OrderModel.create({ userId });
     const { id } = createOrder.dataValues;
-    await ProductModel.update({ orderId: id }, { where: { id: product } });
+    const teste = await ProductModel.update({ orderId: id }, { where: { id: product } });
+    console.log(teste);
   });
 
   return { type: 'SUCCESSFUL', message: order };
