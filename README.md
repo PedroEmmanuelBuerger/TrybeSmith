@@ -1,13 +1,35 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# TrybeSmith
+O trybesmith foi um projeto realizado no curso da trybe, a qual simula uma aplicação para banco de dados(MYSql) onde somos o "ferreiro". Temos produtos, usuarios e pedidos e devemos forjar uma aplicação back-end para prestar o atendimento aos usuarios.
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+## Funcionalidades
+O projeto possui as seguintes funcionalidades:
+- cadastro e login de usuarios(usando de validações de token)
+- casdastro, exclusão e alteração de pedidos.
+- visualização e cadastro de novos produtos.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## Tecnologias Utilizadas
+
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
+- JavaScript
+- Typescript
+- Modelo MSC(model, service, controller)
+- Node
+- MySql
+- Postman
+- Beekeper
+
+## Instalação
+Para instalar e executar o projeto localmente, siga os passos abaixo:
+1. Clone o repositório para sua máquina local:
+2. git clone https://github.com/PedroEmmanuelBuerger/project-TrybeSmith.git
+3.  Instale o Node.js em sua máquina.
+4. Na pasta do projeto, instale as dependências executando o comando: npm install;
+5. para rodar os testes, rode npm run test:local
+6. para testar a aplicação siga para o seguinte caminho no navegador(http://localhost:3001/)
+
+## Principais Aprendizados
+Principal apredizado do projeto foi a utilização do typescript para tipar dados, sendo eles variaveis, funções, parametros, retornos, arrays e etc.
+Tambem foi interesante continuar consolidando o uso do modelo MSC.
+
+## Conclusão
+O Projeto trybesmith oferece uma aplicação BackEnd com banco de forma prática e eficiente para o cadastro de produtos, criação e validação de usuarios e criação e organização de pedidos. 
